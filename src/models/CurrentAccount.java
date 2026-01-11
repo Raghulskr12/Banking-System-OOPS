@@ -1,4 +1,6 @@
 package src.models;
 
-public class CurrentAccount {
+public class CurrentAccount extends Account {
+
+
 }

@@ -3,7 +3,7 @@ package src.models;
 public abstract class Account {
     private int accountNumber;
     private Customer customer;
-    private double balance;
+    protected double balance;
 
     Account(int accountNumber, Customer customer, double balance){
         this.accountNumber=accountNumber;
