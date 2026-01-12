@@ -2,7 +2,7 @@ package src.models;
 
 public class SavingsAccount extends Account{
 
-    SavingsAccount(int accountNumber, Customer customer, double balance) {
+    public SavingsAccount(int accountNumber, Customer customer, double balance) {
         super(accountNumber, customer, balance);
     }
 

@@ -1,7 +1,7 @@
 package src.models;
 
 public class CurrentAccount extends Account {
-    CurrentAccount(int accountNumber, Customer customer, double balance) {
+    public CurrentAccount(int accountNumber, Customer customer, double balance) {
         super(accountNumber, customer, balance);
     }
 
