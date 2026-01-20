@@ -1,3 +1,5 @@
+package src;
+
 import src.services.BankService;
 
 import java.util.Scanner;
