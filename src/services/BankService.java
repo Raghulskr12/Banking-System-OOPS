@@ -83,7 +83,40 @@ public class BankService {
             System.out.println("Amount deposited successfully");
     }
 
-    public void withdrawMoney(){}
+    public void withdrawMoney(){
+        System.out.println("Enter the account number :");
+        int accNumber = scanner.nextInt();
+
+        Account account = accounts.get(accNumber);
+
+        if(account == null )
+        {
+            System.out.println("Invalid account number entered");
+            return;
+        }
+
+        System.out.println("Enter the amount to withDraw :");
+
+        double amount = scanner.nextDouble();
+
+        if(amount<=0)
+        {
+            System.out.println("Invalid amount entered");
+            return;
+        }
+
+        boolean message = account.withdraw(amount);
+
+        if(message)
+        {
+            System.out.println("amount withdraw success");
+        }
+        else
+        {
+            System.out.println("Amount not sufficient");
+        }
+    }
+
 
     public void checkBalance(){}
 
