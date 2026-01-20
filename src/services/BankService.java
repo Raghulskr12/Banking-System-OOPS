@@ -56,7 +56,32 @@ public class BankService {
 
 
 
-    public void depositMoney(){}
+    public void depositMoney(){
+            System.out.println("Enter the account number:");
+            int accNumber = scanner.nextInt();
+
+            Account account= accounts.get(accNumber);
+
+            if(account == null)
+            {
+                System.out.println("Account not found");
+                return;
+            }
+
+            System.out.println("Enter the amount to deposit :");
+
+            double amount = scanner.nextDouble();
+
+            if(amount<=0)
+            {
+                System.out.println("Invalid amount");
+                return;
+            }
+
+            account.deposit(amount);
+
+            System.out.println("Amount deposited successfully");
+    }
 
     public void withdrawMoney(){}
 
