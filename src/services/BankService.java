@@ -118,7 +118,22 @@ public class BankService {
     }
 
 
-    public void checkBalance(){}
+    public void checkBalance(){
+
+        System.out.println("Enter the account number");
+        int accNumber = scanner.nextInt();
+
+        Account account = accounts.get(accNumber);
+
+        if(account == null)
+        {
+            System.out.println("Invalid account number");
+            return;
+        }
+
+        System.out.println("The name of the customer is :" + account.getCustomer().getName());
+        System.out.println("Balance amount in the account is :" + account.getBalance());
+    }
 
 
 }
