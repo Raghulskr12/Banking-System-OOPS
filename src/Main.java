@@ -17,7 +17,8 @@ class Main {
             System.out.println("2. Deposit money");
             System.out.println("3. Withdraw money");
             System.out.println("4. Check Balance");
-            System.out.println("5.Exit");
+            System.out.println("5. View Account Details");
+            System.out.println("6.Exit");
 
             System.out.println("Enter your choice :");
             int ans = scanner.nextInt();
@@ -29,7 +30,8 @@ class Main {
                 case 2 -> bankService.depositMoney();
                 case 3 -> bankService.withdrawMoney();
                 case 4 -> bankService.checkBalance();
-                case 5 -> {
+                case 5 -> bankService.viewAccountDetails();
+                case 6 -> {
                     System.out.println("Thanks for using the system");
                     return;
                 }
