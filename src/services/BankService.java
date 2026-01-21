@@ -161,5 +161,28 @@ public class BankService {
 
 
 
+    public void removeAccount() {
+        System.out.println("Enter the account number :");
+        int accNumber = scanner.nextInt();
 
+        Account account = accounts.get(accNumber);
+
+        if(account == null)
+        {
+            System.out.println("Invalid account number");
+            return;
+        }
+
+        if(accounts.remove(accNumber)  != null )
+        {
+            System.out.println("Account Removed Successfully");
+            return;
+        }
+        else
+        {
+            System.out.println("Account not found");
+            return;
+        }
+
+    }
 }
