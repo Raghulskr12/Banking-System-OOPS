@@ -138,6 +138,24 @@ public class BankService {
 
     public void viewAccountDetails(){
 
+        System.out.println("Enter the account number :");
+        int accNumber = scanner.nextInt();
+
+        Account account = accounts.get(accNumber);
+        if(account == null)
+        {
+            System.out.println("Invalid account number entered");
+            return;
+        }
+
+        System.out.println("=== Account Details ===");
+        System.out.println("Account number :" + account.getAccountNumber());
+        System.out.println("Account balance :" + account.getBalance());
+        System.out.println("Name :" + account.getCustomer().getName());
+        System.out.println("Phone Number :" + account.getCustomer().getPhone());
+        System.out.println("Address :" + account.getCustomer().getAddress());
+
+
     }
 
 
